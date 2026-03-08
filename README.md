@@ -78,8 +78,3 @@ University students often struggle to find flexible, legitimate freelance work t
 
   * **Notification Hub:** Users have a dedicated notification tab where all alerts arrive.
   * **UI Indicators:** A red dot appears when a new notification is received, and the tab is divided into "read" and "unread" sections. Push notifications will also be sent out using OneSignal.
-
-## Technology Stack
-
-  * **Infrastructure:** The platform utilizes Supabase for its Database, Authentication, and Storage, while being hosted on Vercel.
-  * **Footer Elements:** The footer includes links to About, Email, GitHub, Donate, Privacy Policy, Terms and Condition, Community Guidelines, and a copyright text reading "© 2026 UniTask Built for students".
