@@ -77,4 +77,4 @@ University students often struggle to find flexible, legitimate freelance work t
 ### 10\. Notification System
 
   * **Notification Hub:** Users have a dedicated notification tab where all alerts arrive.
-  * **UI Indicators:** A red dot appears when a new notification is received, and the tab is divided into "read" and "unread" sections. Push notifications will also be sent out using OneSignal.
+  * **UI Indicators:** A red dot appears when a new notification is received, and the tab is divided into "read" and "unread" sections.
