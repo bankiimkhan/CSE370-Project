@@ -1,0 +1,344 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 36px 24px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 18px;
+  width: 960px;
+  max-width: 95vw;
+  min-height: 560px;
+  box-shadow: var(--shadow-lg);
+  display: grid !important;
+  grid-template-columns: 1fr 430px !important;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+  border: 1px solid var(--border);
+}
+
+.leftPane {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #22324a;
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 44px !important;
+}
+
+.leftPane::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,16,30,0.78) 0%, rgba(8,16,30,0.35) 58%, rgba(8,16,30,0.08) 100%);
+  z-index: 1;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.leftTitle {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.leftBullets {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.leftBullets li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.94;
+  color: white !important;
+}
+
+.rightPane {
+  padding: 40px;
+  display: flex !important;
+  flex-direction: column !important;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+}
+
+@media (max-width: 850px) {
+  .card {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 450px !important;
+    min-height: auto !important;
+  }
+  .leftPane {
+    display: none !important;
+  }
+}
+
+.stepIndicator {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.stepDot {
+  flex: 1;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.stepActive {
+  background: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.brand span { color: var(--accent); }
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text2);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+}
+.field input, .field select, .field textarea {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text);
+  background: var(--surface);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: var(--ring);
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.roleCard {
+  cursor: pointer;
+  padding: 20px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.roleCard:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.roleCardActive {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  box-shadow: var(--shadow-xs);
+}
+.roleEmoji {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+.roleLabel {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+}
+.roleDesc {
+  font-size: 12px;
+  color: var(--text3);
+  line-height: 1.4;
+}
+
+.otpInput {
+  letter-spacing: 0.5em;
+  font-size: 24px !important;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--yellow);
+  background: var(--yellow-light);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.forgotLink {
+  font-size: 13px;
+  color: var(--accent);
+  text-align: right;
+  font-weight: 500;
+}
+.forgotLink:hover { text-decoration: underline; }
+
+.btn {
+  padding: 12px 14px;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.15s;
+  margin-top: 4px;
+}
+.btn:hover:not(:disabled) { background: var(--accent-hover); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface2);
+  color: var(--text2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.cancelBtn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.switchText {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text3);
+}
+.switchText a { color: var(--accent); font-weight: 600; }
+.switchText a:hover { text-decoration: underline; }
+
+.inlineActions {
+  display: flex;
+  gap: 10px;
+}
+
+.iconOnlyBtn {
+  flex: 0 0 auto;
+  width: 46px;
+}
+
+.growBtn {
+  flex: 1;
+}
+
+.resendRow {
+  font-size: 13px;
+  color: var(--text3);
+  text-align: center;
+}
+
+.resendBtn {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sessionState {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.statusCard {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.statusIcon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusText {
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.backLinkBtn {
+  display: flex;
+  margin-top: 26px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.inlineBackLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
